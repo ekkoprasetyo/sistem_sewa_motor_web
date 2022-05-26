@@ -29,25 +29,16 @@ class UsersRequest extends FormRequest
         switch(Route::currentRouteName()) {
             case 'user.store':
                 return [
-                    'txt_users_nip' => 'required|regex:/^[0-9]+$/|unique:t_rent_user,c_user_nip',
                     'txt_users_full_name' => 'required',
                     'txt_users_email' => 'required|email|unique:t_rent_user,c_user_email',
                     'txt_users_password' => 'required|confirmed|min:6',
-                    'txt_users_position' => 'required|numeric||unique:t_rent_user,c_user_position',
                     'txt_users_role' => 'required|numeric',
                     'txt_users_status' => 'required|numeric',
                 ];
             case 'user.update':
                 return [
-                    'txt_users_nip' => 'required|regex:/^[0-9]+$/|unique:t_rent_user,c_user_nip,'.$this->get('txt_users_id').',c_user_id',
                     'txt_users_full_name' => 'required',
                     'txt_users_email' => 'required|email|unique:t_rent_user,c_user_email,'.$this->get('txt_users_id').',c_user_id',
-                    'txt_users_position' => ['required','numeric',
-                        Rule::unique('t_rent_user','c_user_position')->where(function ($query) use ($user_id) {
-                            return $query->where('c_user_position', '>', 0)
-                                ->where('c_user_id', '!=', $user_id);
-                        }),
-                    ],
                     'txt_users_role' => 'required|numeric',
                     'txt_users_status' => 'required|numeric',
                 ];
@@ -61,11 +52,9 @@ class UsersRequest extends FormRequest
 
     public function attributes() {
         return [
-            'txt_users_nip' => 'NIP',
             'txt_users_full_name' => 'Full Name',
             'txt_users_email' => 'Email',
             'txt_users_password' => 'Password',
-            'txt_users_position' => 'Position',
             'txt_users_role' => 'Role',
             'txt_users_status' => 'Status',
         ];
