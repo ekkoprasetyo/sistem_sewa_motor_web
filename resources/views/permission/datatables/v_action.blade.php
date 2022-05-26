@@ -1,0 +1,2 @@
+<button type="button" onclick="editModal('{{ $permission->c_permission_id }}','{{ route('permission.edit') }}')" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i></button>
+<button type="button" onclick="deleteModal('{{ $permission->c_permission_id }}','{{ route('permission.delete') }}')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>

@@ -1,0 +1,112 @@
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../../fonts/SourceSansPro-Regular.ttf);
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../../fonts/SourceSansPro-Bold.ttf);
+    font-weight: bold;
+}
+
+@page {
+    size: A4 portrait;
+    margin: 15px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #555555;
+}
+
+.table-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    color: #555555;
+    background: #FFFFFF;
+    font-family: SourceSansPro, Arial, sans-serif;
+    font-size: 9px;
+    margin-bottom: 1cm;
+    padding-bottom: 0.5cm;
+    padding-top: 0.2cm;
+}
+
+footer {
+    position: fixed;
+    bottom: 0cm;
+    left: 0cm;
+    right: 0cm;
+    height: 1cm;
+
+    /** Extra personal styles **/
+    background-color: #5bb6f5;
+    color: #ffffff;
+    text-align: center;
+    line-height: 0.5cm;
+    font-family: SourceSansPro, Arial, sans-serif;
+}
+
+.page-number:before {
+    content: counter(page);
+}
+
+.border-table-row {
+    border: 1px solid black;
+}
+
+.border-all {
+    border: 1px solid #999;
+}
+
+.header-info {
+    width: 35%;
+    border-collapse: collapse;
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.header-barcode {
+    width: 27%;
+    border-collapse: collapse;
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.image-railink {
+    width: 100px;
+}
+
+.image-nutech {
+    width: 100px;
+}
+
+.align-left {
+    float: left;
+}
+
+.align-right {
+    float: right;
+}
+
+.device-name {
+    color: #0e84b5;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.td-table-content {
+    border: 1px solid #999;
+}
+
+.table-no-break {
+    page-break-inside: avoid;
+}
+
+.text-bold {
+    font-weight: bold;
+}

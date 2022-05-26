@@ -1,0 +1,51 @@
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../../fonts/SourceSansPro-Regular.ttf);
+}
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../../fonts/SourceSansPro-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../../fonts/SourceSansPro-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+@page {
+    size: A8 landscape;
+    margin: 6px;
+}
+
+.table-center {
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+}
+
+.table-center tr {
+    line-height: 10px;
+    overflow-wrap: break-word;
+}
+
+.float-left {
+    float: left;
+}
+
+.image-railink {
+    padding-top: 5px;
+    width: 60px;
+    text-align: center;
+}
+
+body {
+    color: #000000;
+    background: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    font-family: SourceSansPro;
+}
+
